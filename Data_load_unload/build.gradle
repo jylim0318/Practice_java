@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:6.0.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // Source: https://mvnrepository.com/artifact/com.mysql/mysql-connector-j
+    implementation 'com.mysql:mysql-connector-j:26.7.0'
+
+}
+ application {
+
+    mainClass = 'org.example.Main'
+}
+tasks.named("run") {
+    jvmArgs '-Dfile.encoding=UTF-8', '-Dstdout.encoding=UTF-8', '-Dstderr.encoding=UTF-8'
+    environment 'DB_URL', findProperty('db.url') ?: 'jdbc:mysql://localhost:3306/Practice?serverTimezone=Asia/Seoul&rewriteBatchedStatements=true'
+    environment 'DB_USER', findProperty('db.user') ?: 'jylim0318'
+    environment 'DB_PASSWORD', findProperty('db.password') ?: 'wklim0321!'
+}
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+
+test {
+    useJUnitPlatform()
+}

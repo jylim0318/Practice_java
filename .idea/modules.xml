@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Practice_java.iml" filepath="$PROJECT_DIR$/.idea/Practice_java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chap14-enum/chap14-enum.iml" filepath="$PROJECT_DIR$/chap14-enum/chap14-enum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chap15-lambda/chap15-lambda.iml" filepath="$PROJECT_DIR$/chap15-lambda/chap15-lambda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chap16-stream/chap16-stream.iml" filepath="$PROJECT_DIR$/chap16-stream/chap16-stream.iml" />
+    </modules>
+  </component>
+</project>
