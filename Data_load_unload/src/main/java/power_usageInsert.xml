@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+    <entry key="insertPowerUsage">
+        INSERT INTO POWER_USAGE (BASE_DATE,base_hour,hq_name,power_mwh,cust_cnt) VALUES ( ?,?,?,?,? );
+
+    </entry>
+
+</properties>
